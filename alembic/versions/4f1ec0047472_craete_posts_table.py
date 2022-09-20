@@ -20,7 +20,7 @@ def upgrade() -> None:
     sa.Column('id', sa.Integer(), nullable = False, primary_key = True),
     sa.Column('title',sa.String(),nullable=False),
     sa.Column('content',sa.String(),nullable=False),
-    sa.Column('created_at',sa.TIMESTAMP(timezone=True),nullable=False,server_default=text('now()')),
+    sa.Column('created_at',sa.TIMESTAMP(timezone=True),nullable=False,server_default=sa.text('now()')),
     sa.Column('owner_id',sa.Integer(),nullable=False))
     op.create_foreign_key('post_users_fk', source_table="posts", referent_table="users", local_cols=[
                           'owner_id'], remote_cols=['id'], ondelete="CASCADE")
