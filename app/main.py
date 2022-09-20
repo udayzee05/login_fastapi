@@ -27,7 +27,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"messgae":"Welcome to fastapi"}
+    return {"messgae":"Welcome to fastapi-login"}
 
 
 
