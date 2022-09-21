@@ -1,18 +1,20 @@
-"""craete user table
+"""empty message
 
-Revision ID: a1d9267670cd
-Revises: 4f1ec0047472
-Create Date: 2022-09-20 14:28:32.783175
+Revision ID: 27835f1d376d
+Revises: 
+Create Date: 2022-09-21 11:17:47.871667
 
 """
 import sqlalchemy as sa
 from alembic import op
 
 # revision identifiers, used by Alembic.
-revision = 'a1d9267670cd'
-down_revision = '4f1ec0047472'
+revision = '27835f1d376d'
+down_revision = None
 branch_labels = None
 depends_on = None
+
+
 
 def upgrade():
     op.create_table('users',

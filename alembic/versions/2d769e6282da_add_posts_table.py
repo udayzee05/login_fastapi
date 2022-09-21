@@ -1,19 +1,18 @@
-"""craete posts table
+"""add posts table
 
-Revision ID: 4f1ec0047472
-Revises: 
-Create Date: 2022-09-20 14:23:01.527187
+Revision ID: 2d769e6282da
+Revises: 27835f1d376d
+Create Date: 2022-09-21 11:20:50.181615
 
 """
 import sqlalchemy as sa
 from alembic import op
 
 # revision identifiers, used by Alembic.
-revision = '4f1ec0047472'
-down_revision = None
+revision = '2d769e6282da'
+down_revision = '27835f1d376d'
 branch_labels = None
 depends_on = None
-
 
 def upgrade() -> None:
     op.create_table('posts',

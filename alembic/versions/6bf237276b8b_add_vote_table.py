@@ -1,16 +1,16 @@
-"""craete vote table
+"""add vote table
 
-Revision ID: 95789b2b91d5
-Revises: a1d9267670cd
-Create Date: 2022-09-20 14:36:20.411959
+Revision ID: 6bf237276b8b
+Revises: 2d769e6282da
+Create Date: 2022-09-21 11:22:05.708276
 
 """
 import sqlalchemy as sa
 from alembic import op
 
 # revision identifiers, used by Alembic.
-revision = '95789b2b91d5'
-down_revision = 'a1d9267670cd'
+revision = '6bf237276b8b'
+down_revision = '2d769e6282da'
 branch_labels = None
 depends_on = None
 
