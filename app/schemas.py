@@ -1,6 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
+from fastapi import Form
 from pydantic import BaseModel, EmailStr
 from pydantic.types import conint
 
@@ -39,8 +40,8 @@ class UserCreate(BaseModel):
 
 
 class UserLogin(BaseModel):
-    email : EmailStr
-    password: str
+    email : EmailStr = Form(...)
+    password: str = Form(...)
 
     class config:
         orm_mode = True
