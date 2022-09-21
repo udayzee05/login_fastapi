@@ -34,11 +34,17 @@ class UserCreate(BaseModel):
     email: EmailStr
     password: str
 
+    class config:
+        orm_mode = True
 
 
 class UserLogin(BaseModel):
     email : EmailStr
     password: str
+
+    class config:
+        orm_mode = True
+
 
 class Token(BaseModel):
     access_token : str
