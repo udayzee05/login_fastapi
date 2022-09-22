@@ -40,8 +40,8 @@ class UserCreate(BaseModel):
 
 
 class UserLogin(BaseModel):
-    email : EmailStr = Form(...)
-    password: str = Form(...)
+    email : EmailStr 
+    password: str 
 
     class config:
         orm_mode = True
