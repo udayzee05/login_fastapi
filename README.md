@@ -28,3 +28,36 @@ preprocess_pipeline
 |-- README.md
 
 '''
+
+
+
+## Project Structure
+
+Here is an overview of the project structure:
+```
+Insurance Prediction System
+├── .github
+│ └── workflows
+│ ├── .gitkeep
+│ └── main.yaml
+├── configs
+│ └── config.yaml
+├── src
+│ ├── components
+│ │ └── init.py
+│ ├── entity
+│ │ └── init.py
+│ ├── pipeline
+│ │ └── init.py
+│ ├── logger
+│ │ └── init.py
+│ ├── init.py
+│ ├── config.py
+│ ├── exception.py
+│ ├── predictor.py
+│ └── utils.py
+├── main.py
+|   app.py
+├── requirements.txt
+└── setup.py
+```
