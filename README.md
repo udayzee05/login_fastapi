@@ -1,72 +1,30 @@
-# login_fastapi
+# login -fastapi
 
-'''
-[START]
- |
- v
-+----------------------------+
-| Import Libraries           |
-| - os, cv2, glob, np        |
-| - enlighten_inference      |
-+----------------------------+
- |
- v
-+----------------------------+
-| Define preprocess class    |
-+----------------------------+
- |            |
- |            v
- |  +------------------------+
- |  | __init__ method        |
- |  | - Initialize path      |
- |  | - Initialize model     |
- |  +------------------------+
- |            |
- |            v
- |  +------------------------+
- |  | checkFolder method     |
- |  | - Check/create folders |
- |  +------------------------+
- |            |
- |            v
- |  +------------------------+
- |  | loadImage method       |
- |  | - Read image from path |
- |  +------------------------+
- |            |
- |            v
- |  +------------------------+
- |  | convertScale method    |
- |  | - Adjust image scale   |
- |  +------------------------+
- |            |
- |            v
- |  +------------------------+
- |  | automatic_brightness_  |
- |  | and_contrast method    |
- |  | - Optimize brightness  |
- |  |   and contrast         |
- |  +------------------------+
- |            |
- |            v
- |  +------------------------+
- |  | maskImage method       |
- |  | - Apply mask to image  |
- |  +------------------------+
- |            |
- |            v
- |  +------------------------+
- |  | writeMaskImage method  |
- |  | - Apply inpainting     |
- |  +------------------------+
- |            |
- |            v
- |  +------------------------+
- |  | enlightenGAN method    |
- |  | - Enhance image        |
- |  +------------------------+
- |
- v
-[END]
+"""
+preprocess_pipeline
+|
+|-- preprocess.py
+|   |
+|   |-- __init__(self, path)
+|   |-- checkFolder(self)
+|   |-- loadImage(self)
+|   |-- convertScale(self, alpha, beta)
+|   |-- automatic_brightness_and_contrast(self, clip_hist_percent=25)
+|   |-- maskImage(self)
+|   |-- writeMaskImage(self)
+|   |-- enlightenGAN(self)
+|
+|-- main.py
+|-- img
+|   |-- input_image.jpg
+|
+|-- models
+|   |-- enlighten_gan.onnx
+|
+|-- output
+|   |-- processed_image.jpg
+|
+|-- requirements.txt
+|-- README.md
 
-'''
+"""
